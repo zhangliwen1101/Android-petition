@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/petition_edf2f6"
+        android:orientation="vertical">
+
+        <include layout="@layout/aorise_include_toolbar" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/petition_44dp"
+            android:background="@color/petition_status_color">
+
+            <LinearLayout
+                android:layout_width="219dp"
+                android:layout_height="@dimen/petition_27dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/rl_has_answer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/petition_left_02">
+
+                    <TextView
+                        android:id="@+id/txt_has_answer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text="已评价"
+                        android:textColor="@color/petition_status_color"
+                        android:textSize="@dimen/petition_12dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_not_answer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/petition_right_01">
+
+                    <TextView
+                        android:id="@+id/txt_not_answer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="false"
+                        android:layout_alignParentStart="false"
+                        android:layout_alignParentTop="false"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text="未评价"
+                        android:textColor="@color/petition_ffffff"
+                        android:textSize="@dimen/petition_12dp" />
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="33dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/petition_22dp"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/petition_20dp"
+                android:layout_marginRight="@dimen/petition_10dp"
+                android:background="@drawable/editnormal">
+
+                <EditText
+                    android:id="@+id/editText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toLeftOf="@+id/imageView"
+                    android:background="@null"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="搜索"
+                    android:imeOptions="actionSearch"
+                    android:inputType="textPersonName"
+                    android:singleLine="true"
+                    android:textColor="@color/petition_aeaeae"
+                    android:textSize="@dimen/petition_12dp" />
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="@dimen/petition_12dp"
+                    android:layout_height="@dimen/petition_12dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    app:srcCompat="@drawable/petition_found" />
+            </RelativeLayout>
+        </RelativeLayout>
+        <cn.aorise.petition.common.commenrefresh.RefreshAndLoadMoreView
+            android:id="@+id/refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/petition_7dp">
+
+            <cn.aorise.petition.common.commenrefresh.LoadMoreListView
+                android:id="@+id/listView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@null"
+                android:focusable="false"
+                android:longClickable="false"
+                android:scrollbars="none" />
+        </cn.aorise.petition.common.commenrefresh.RefreshAndLoadMoreView>
+
+    </LinearLayout>
+</layout>

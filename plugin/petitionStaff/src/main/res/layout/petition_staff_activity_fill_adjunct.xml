@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/petition_staff_55dp"
+            android:background="@color/petition_staff_0066ba">
+
+            <RelativeLayout
+                android:id="@+id/rl_petition_return"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/img_return"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/petition_staff_14dp"
+                    app:srcCompat="@drawable/petition_staff_return" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/txt_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="附件列表"
+                    android:textColor="@color/petition_staff_ffffff" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_petition_right"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/txt_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/petition_staff_10dp"
+                    android:textColor="@color/petition_staff_ffffff" />
+            </RelativeLayout>
+        </LinearLayout>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/petition_staff_edf2f6"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/petition_staff_187dp"
+                    android:background="@color/petition_staff_0066ba"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/ll_add_picture"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true">
+
+                            <TextView
+                                android:id="@+id/textView7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:text="添加照片"
+                                android:textColor="@color/petition_staff_ffffff"
+                                android:textSize="@dimen/petition_staff_10dp" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/imageView5"
+                                android:layout_width="@dimen/petition_staff_150dp"
+                                android:layout_height="@dimen/petition_staff_120dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                app:srcCompat="@drawable/petition_staff_upload_picture" />
+
+                            <ImageView
+                                android:id="@+id/imageView9"
+                                android:layout_width="@dimen/petition_staff_27dp"
+                                android:layout_height="@dimen/petition_staff_23dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                app:srcCompat="@drawable/petition_staff_picture" />
+
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_add_file"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true">
+
+                            <TextView
+                                android:id="@+id/textView6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:text="添加文档"
+                                android:textColor="@color/petition_staff_ffffff"
+                                android:textSize="@dimen/petition_staff_10dp" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/imageView6"
+                                android:layout_width="@dimen/petition_staff_150dp"
+                                android:layout_height="@dimen/petition_staff_120dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                app:srcCompat="@drawable/petition_staff_upload_file" />
+
+                            <ImageView
+                                android:id="@+id/imageView11"
+                                android:layout_width="@dimen/petition_staff_27dp"
+                                android:layout_height="@dimen/petition_staff_23dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                app:srcCompat="@drawable/petition_staff_upload" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/petition_staff_56dp">
+
+                    <TextView
+                        android:id="@+id/textView11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/petition_staff_12dp"
+                        android:text="@string/petition_staff_picture_name"
+                        android:textColor="@color/petition_staff_565656"
+                        android:textSize="@dimen/petition_staff_12dp" />
+
+                    <TextView
+                        android:id="@+id/textView13"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/petition_staff_1dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:background="@color/petition_staff_aeaeae" />
+                </RelativeLayout>
+
+                <cn.aorise.petition.staff.common.xlistview.HorizontalListView
+                    android:id="@+id/mlistview"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/petition_staff_106dp"
+                    android:layout_marginTop="@dimen/petition_staff_9dp"
+                    android:numColumns="3" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/petition_staff_56dp">
+
+                    <TextView
+                        android:id="@+id/textView12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/petition_staff_12dp"
+                        android:text="@string/petition_staff_file_name"
+                        android:textColor="@color/petition_staff_565656"
+                        android:textSize="@dimen/petition_staff_12dp" />
+
+                    <TextView
+                        android:id="@+id/textView14"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/petition_staff_1dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:background="@color/petition_staff_aeaeae" />
+                </RelativeLayout>
+
+                <cn.aorise.petition.staff.common.xlistview.MyListView
+                    android:id="@+id/mylistview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/petition_staff_ffffff">
+
+                </cn.aorise.petition.staff.common.xlistview.MyListView>
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/petition_staff_109dp"
+                    android:layout_marginLeft="@dimen/petition_staff_20dp"
+                    android:layout_marginRight="@dimen/petition_staff_12dp"
+                    android:layout_marginTop="@dimen/petition_staff_23dp"
+                    android:gravity="center"
+                    android:text="@string/petition_staff_doc_docx_name"
+                    android:textAllCaps="false"
+                    android:textColor="@color/petition_staff_1b43cb"
+                    android:textSize="@dimen/petition_staff_10dp" />
+
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>

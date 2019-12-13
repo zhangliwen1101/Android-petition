@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.aorise.petition.staff">
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application>
+
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.bugull.cameratakedemo.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+
+        <activity
+            android:name=".ui.activity.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.PetitionStaffLoginActivity"
+            android:label="@string/petition_staff_login"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.FullscreenTheme" />
+        <activity
+            android:name=".ui.activity.PetitionStaffImportantPetitionPeopleActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/All.theme" />
+        <activity
+            android:name=".ui.activity.PetitionStaffImportantPetitionPeopleDetailActivity"
+            android:label="@string/petition_staff_important_object"
+            android:screenOrientation="portrait"
+            android:theme="@style/All.theme" />
+        <activity
+            android:name=".ui.activity.PetitionStaffstaffDetailInfoActivity"
+            android:label="@string/petition_staff_staff_info_detail"
+            android:screenOrientation="portrait"
+            android:theme="@style/All.theme" />
+        <activity
+            android:name=".ui.activity.PetitionStaffImportantPetitionMatterActivity"
+            android:label="@string/petition_staff_import_items"
+            android:screenOrientation="portrait"
+            android:theme="@style/All.theme" />
+        <activity
+            android:name=".ui.activity.PetitionStaffImportantPetitionMatterDetailActivity"
+            android:label="@string/petition_staff_import_items"
+            android:screenOrientation="portrait"
+            android:theme="@style/All.theme" />
+        <activity
+            android:name=".ui.activity.PetitionStaffDisputeCheckActivity"
+            android:label="@string/petition_staff_conflict_check"
+            android:screenOrientation="portrait"
+            android:theme="@style/All.theme" />
+        <activity
+            android:name=".ui.activity.PetitionStaffDisputeCheckDetailActivity"
+            android:label="@string/petition_staff_conflict_check"
+            android:screenOrientation="portrait"
+            android:theme="@style/All.theme" />
+        <activity
+            android:name=".ui.activity.PetitionStaffChangePersonalInfoActivity"
+            android:label="@string/petition_staff_personal_info"
+            android:screenOrientation="portrait"
+            android:theme="@style/All.theme" />
+        <activity
+            android:name=".ui.activity.PetitionStaffChangePersonalInfoNationActivity"
+            android:label="@string/petition_staff_nation_choose"
+            android:screenOrientation="portrait"
+            android:theme="@style/All.theme" />
+        <activity
+            android:name=".ui.activity.PetitionStaffChangeBundingPhoneActivity"
+            android:label="@string/petition_staff_change_bunding_phone"
+            android:screenOrientation="portrait"
+            android:theme="@style/All.theme" />
+        <activity
+            android:name=".ui.activity.PetitionStaffChangeBundingPhoneActivity01"
+            android:label="@string/petition_staff_change_bunding_phone"
+            android:screenOrientation="portrait"
+            android:theme="@style/All.theme" />
+        <activity
+            android:name=".ui.activity.PetitionStaffChangePasswordActivity"
+            android:label="@string/petition_staff_change_password"
+            android:screenOrientation="portrait"
+            android:theme="@style/All.theme" />
+        <activity
+            android:name=".ui.activity.PetitionStaffPetitionInfoSubmission"
+            android:label="@string/petition_staff_petition_submission"
+            android:screenOrientation="portrait"
+            android:theme="@style/All.theme" />
+        <activity
+            android:name=".ui.activity.PetitionStaffChangePersonalInfoAddress"
+            android:label="@string/petition_staff_area_01"
+            android:screenOrientation="portrait"
+            android:theme="@style/All.theme" />
+        <activity
+            android:name=".ui.activity.PetitionStaffChangePersonalInfoAddress01"
+            android:label="@string/petition_staff_area_01"
+            android:screenOrientation="portrait"
+            android:theme="@style/All.theme" />
+        <activity
+            android:name=".ui.activity.PetitionStaffAnalyzeShapeActivity"
+            android:label="@string/petition_staff_analyze_01"
+            android:screenOrientation="portrait"
+            android:theme="@style/All.theme" />
+        <activity
+            android:name=".ui.activity.PetitionStaffAnalyzeTimelyActivity"
+            android:label="五率统计"
+            android:screenOrientation="portrait"
+            android:theme="@style/All.theme" />
+        <activity
+            android:name=".ui.activity.PetitionStaffAnalyzeOnTimeActivity"
+            android:label="信访部门及时受理率"
+            android:screenOrientation="portrait"
+            android:theme="@style/All.theme" />
+        <activity
+            android:name=".ui.activity.PetitionStaffAnalyzeSatisfactionActivity"
+            android:label="按期办结率"
+            android:screenOrientation="portrait"
+            android:theme="@style/All.theme" />
+        <activity
+            android:name=".ui.activity.PetitionStaffAnalyzeTypeActivity"
+            android:label="@string/petition_staff_analyze_05"
+            android:screenOrientation="portrait"
+            android:theme="@style/All.theme" />
+        <activity
+            android:name=".ui.activity.PetitionStaffAnalyzeOrganActivity"
+            android:label="@string/petition_staff_analyze_06"
+            android:screenOrientation="portrait"
+            android:theme="@style/All.theme" />
+        <activity
+            android:name=".ui.activity.PetitionStaffAnalyzeZeRenDanWeiManYiLvActivity"
+            android:label="责任单位及时受理率"
+            android:screenOrientation="portrait"
+            android:theme="@style/All.theme" />
+        <activity
+            android:name=".ui.activity.PetitionStaffAnalyzeWangxinzhanbilvActivity"
+            android:label="信访部门满意率"
+            android:screenOrientation="portrait"
+            android:theme="@style/All.theme" />
+        <activity
+            android:name=".ui.activity.PetitionStaffAnalyzeBumenmanyilvActivity"
+            android:label="责任单位满意率"
+            android:screenOrientation="portrait"
+            android:theme="@style/All.theme" />
+        <activity
+            android:name=".ui.activity.PetitionStaffAnalyzeBumenmanyilvActivity01"
+            android:label="参评率"
+            android:screenOrientation="portrait"
+            android:theme="@style/All.theme" />
+        <activity
+            android:name=".ui.activity.PetitionStaffAnalyzeBumenmanyilvActivity02"
+            android:label="网信占比率"
+            android:screenOrientation="portrait"
+            android:theme="@style/All.theme" />
+        <activity
+            android:name=".ui.activity.PetitionStaffImportantMonitorActivity"
+            android:label="@string/petition_staff_import_submission"
+            android:screenOrientation="portrait"
+            android:theme="@style/All.theme" />
+        <activity
+            android:name=".ui.activity.PetitionStaffWorkWarningActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/All.theme" />
+        <activity
+            android:name=".ui.activity.PetitionStaffWorkWarningActivity01"
+            android:screenOrientation="portrait"
+            android:theme="@style/All.theme" />
+        <activity
+            android:name=".ui.activity.PetitionStaffWorkWarningActivity02"
+            android:screenOrientation="portrait"
+            android:theme="@style/All.theme" />
+        <activity
+            android:name=".ui.activity.PetitionStaffWorkWarningActivity03"
+            android:screenOrientation="portrait"
+            android:theme="@style/All.theme" />
+        <activity
+            android:name=".ui.activity.PetitionStaffWorkWarningActivity04"
+            android:screenOrientation="portrait"
+            android:theme="@style/All.theme" />
+        <activity
+            android:name=".ui.activity.PetitionStaffWorkWarningActivity05"
+            android:screenOrientation="portrait"
+            android:theme="@style/All.theme" />
+        <activity
+            android:name=".ui.activity.PetitionStaffWorkWarningActivity06"
+            android:screenOrientation="portrait"
+            android:theme="@style/All.theme" />
+        <activity
+            android:name=".ui.activity.PetitionStaffWorkWarningActivity07"
+            android:screenOrientation="portrait"
+            android:theme="@style/All.theme" />
+        <activity
+            android:name=".ui.activity.PetitionStaffWorkWarningDetailActivity"
+            android:label="@string/petition_staff_review_petition_letter"
+            android:screenOrientation="portrait"
+            android:theme="@style/All.theme" />
+        <activity
+            android:name=".ui.activity.PetitionStaffImportantMonitorAddPeopleActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/All.theme" />
+        <activity
+            android:name=".ui.activity.PetitionStaffChooseZJLXActivity"
+            android:label="@string/petition_staff_zjlx"
+            android:screenOrientation="portrait"
+            android:theme="@style/All.theme" />
+        <activity
+            android:name=".ui.activity.PetitionStaffImportantMonitorAddMatterActivity"
+            android:label="新增重点事项监控"
+            android:screenOrientation="portrait"
+            android:theme="@style/All.theme" />
+        <activity
+            android:name=".ui.activity.PetitionStaffImportantMonitorAddMatterWTTypeActivity"
+            android:label="@string/petition_staff_wt_type"
+            android:screenOrientation="portrait"
+            android:theme="@style/All.theme" />
+        <activity
+            android:name=".ui.activity.PetitionStaffImportantMonitorAddMatterWTTypeActivity01"
+            android:label="@string/petition_staff_wt_type"
+            android:screenOrientation="portrait"
+            android:theme="@style/All.theme" />
+        <activity
+            android:name=".ui.activity.PetitionStaffImportantMonitorAddMatterXFMDActivity"
+            android:label="@string/petition_staff_XFMD"
+            android:screenOrientation="portrait"
+            android:theme="@style/All.theme" />
+        <activity
+            android:name=".ui.activity.PetitionStaffImportantMonitorAddMatterAdjunctActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/All.theme" />
+        <activity
+            android:name=".ui.activity.PetitionStaffImportantMonitorAddMatterActivity01"
+            android:screenOrientation="portrait"
+            android:theme="@style/All.theme" />
+        <activity
+            android:name=".ui.activity.PetitionStaffImportantMonitorAddMatterContactPeopleListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/All.theme" />
+        <activity
+            android:name=".ui.activity.PetitionStaffImportantMonitorAddMatterAddressActivity"
+            android:label="@string/petition_staff_area"
+            android:screenOrientation="portrait"
+            android:theme="@style/All.theme" />
+        <activity
+            android:name=".ui.activity.PetitionStaffImportantMonitorAddMatterAddressActivity01"
+            android:label="@string/petition_staff_area"
+            android:screenOrientation="portrait"
+            android:theme="@style/All.theme" />
+        <activity
+            android:name=".ui.activity.PetitionStaffImportantMonitorAddMatterContactPeopleAddActivity"
+            android:label="@string/petition_staff_add_contact_people"
+            android:screenOrientation="portrait"
+            android:theme="@style/All.theme" />
+        <activity
+            android:name=".ui.activity.PetitionStaffImportantMonitorAddMatterAddressActivity111"
+            android:label="@string/petition_staff_area"
+            android:screenOrientation="portrait"
+            android:theme="@style/All.theme" />
+        <activity
+            android:name=".ui.activity.PetitionStaffImportantMonitorAddMatterAddressActivity112"
+            android:label="@string/petition_staff_area"
+            android:screenOrientation="portrait"
+            android:theme="@style/All.theme" />
+        <activity
+            android:name=".ui.activity.PetitionStaffWorkWarningAdjunctActivity"
+            android:label="@string/petition_staff_add_adjunct"
+            android:screenOrientation="portrait"
+            android:theme="@style/All.theme" />
+        <activity android:name=".ui.activity.TransPortChooseActivity"
+            android:label="去向"
+            android:screenOrientation="portrait"
+            android:theme="@style/All.theme" />
+
+        <activity android:name=".ui.activity.TransPortActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/All.theme"></activity>
+        <activity
+            android:name=".ui.activity.PetitionStaffWorkWarningAdjunctPictureActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.FullscreenTheme" />
+    </application>
+
+</manifest>

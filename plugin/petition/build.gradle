@@ -1,0 +1,78 @@
+//apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
+apply plugin: 'org.greenrobot.greendao'
+//apply from: '../../config/fat-aar.gradle'
+
+greendao {
+    schemaVersion 1
+    targetGenDir 'src/main/java'
+    daoPackage 'cn.aorise.petition.db'
+}
+
+
+/**
+ * 1. gradlew clean
+ * 2. gradlew build /assembleRelease
+ */
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+    resourcePrefix "petition_"
+
+    dataBinding {
+        enabled = true
+    }
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode 7
+        versionName "1.0.7"
+        multiDexEnabled true
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        def BASE_URL = "BASE_URL"
+        def MOCK_MODE = "MOCK_MODE"
+        release {
+            buildConfigField "Boolean", MOCK_MODE, "true"
+            buildConfigField "String", BASE_URL, '" http://xfjk.zhihuixupu.com/"'
+            minifyEnabled false
+            shrinkResources false
+            zipAlignEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            //signingConfig signingConfigs.release
+        }
+        debug {
+            buildConfigField "Boolean", MOCK_MODE, "false"
+            buildConfigField "String", BASE_URL, '"http://xfjk.zhihuixupu.com/"'
+            minifyEnabled false
+            shrinkResources false
+            zipAlignEnabled false
+            //signingConfig signingConfigs.release
+        }
+    }
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testCompile 'junit:junit:4.12'
+    //compile project(':commonLib')
+    compile rootProject.ext.dependencies['aorise-common']
+    compile files('libs/httpclient-4.2.5.jar')
+    compile files('libs/httpcore-4.4.4.jar')
+    compile files('libs/mpandroidchartlibrary-2-2-4.jar')
+    //txt加载html需要的包
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+}
+
+
+//apply from: '../../config/maven-petition.gradle'
+

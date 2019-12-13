@@ -1,0 +1,4 @@
+include ':platform'
+
+include ':plugin:petition'
+include ':plugin:petitionStaff'
